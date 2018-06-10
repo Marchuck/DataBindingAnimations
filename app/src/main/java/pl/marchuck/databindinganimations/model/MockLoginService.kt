@@ -10,7 +10,7 @@ class MockLoginService : LoginService {
     override fun requestLogin(loginRequest: LoginRequest): Deferred<LoginResponse> {
         return async {
 
-            delay(13, TimeUnit.SECONDS)
+            delay(3, TimeUnit.SECONDS)
 
             return@async LoginResponse(email = loginRequest.email, name = "Joe", surname = "Doe")
         }
